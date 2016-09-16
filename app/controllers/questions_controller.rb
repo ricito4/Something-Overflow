@@ -1,6 +1,6 @@
 class QuestionsController < ApplicationController
   def index
-    @questions= (Question.includes(:user)).to_json
+    @questions= Question.all
   end
   def show
     @question = Question.find(params[:id]).to_json

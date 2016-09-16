@@ -24,9 +24,7 @@ class QuestionShowView extends React.Component {
       <div>
         <h1> {question["title"]} </h1>
         <p> {question["text"]} </p>
-        <ul>
-        <li></li>
-        </ul>
+        < AnswersView data={this.state.answers} />
       </div>
       )
   }
