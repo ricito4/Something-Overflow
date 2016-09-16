@@ -17,10 +17,18 @@ class QuestionsView extends React.Component {
       })
     }.bind(this))
   }
+  newQuestion(question) {
+    this.setState({
+      questions: [question].concat(this.state.questions)
+    })
+  }
+
+
   render(){
     return (
       <div>
         <h1> SOMETHING OVERFLOW, but what is something? </h1>
+        <QuestionNewView newQuestion={this.newQuestion.bind(this)}/>
         {
           this.state.questions.map((question,index) => {
 
